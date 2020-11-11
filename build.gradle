@@ -1,8 +1,13 @@
+buildscript {
+  dependencies {
+    classpath('com.google.cloud.tools:jib-spring-boot-extension-gradle:0.1.0')
+  }
+}
 plugins {
 	id 'org.springframework.boot' version '2.3.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
-  id 'com.google.cloud.tools.jib' version '2.5.0'
+  id 'com.google.cloud.tools.jib' version '2.6.0'
 }
 
 group = 'com.example'
@@ -37,4 +42,13 @@ test {
 //   containerizingMode =  'packaged'
 // }
 
-
+jib {
+  pluginExtensions {
+    pluginExtension {
+      implementation = 'com.google.cloud.tools.jib.gradle.extension.springboot.JibSpringBootExtension'
+    }
+  }
+  to {
+    image = 'spring-boot-web:1.0.0'
+  }
+}

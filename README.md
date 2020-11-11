@@ -1,5 +1,11 @@
 # spring-boot-jib
 
+## docker
+
+```bash
+docker build -t spring-boot-web:dockerfile .
+```
+
 ## redoc cloud run deployment
 
 ```bash

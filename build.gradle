@@ -49,6 +49,6 @@ jib {
     }
   }
   to {
-    image = 'spring-boot-web:1.0.0'
+    image = 'spring-boot-web:jib'
   }
 }

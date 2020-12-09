@@ -1,5 +1,7 @@
 # spring-boot-jib
 
+[Jibbing with spring boot](https://blog.shanelee.name/2020/08/29/jibbing-with-spring-boot-and-google-cloud-run/)
+
 ## Buildpacks
 
 Install docker and download [the pack tool](https://buildpacks.io/docs/tools/pack/)
